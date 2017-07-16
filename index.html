@@ -12,7 +12,18 @@
 		<script src="./controllers/controller.js"></script>
 	</head>
 	<body ng-controller="displayCtrl">
-		<strong>{{"Here " + nombre}}</strong>
+		<strong>Comments</strong><br>
+		<input type="text" ng-model= "newComment.comment"><strong>New Comment</strong><br>
+		<input type="text" ng-model= "newComment.userName"><strong>New User Name</strong><br>
+		<button ng-click="addComments()">Add A Comment</button>
+			
+
+				<ul class="coments">
+					<li ng-repeat= 'comment in comments'>
+						{{comment.comment}} - <strong>{{comment.userName}}</strong>
+					</li>
+				</ul>
+
 		
 
 		<script type="text/javascript"></script>
